@@ -8,4 +8,4 @@ primarily Rails and Angular dominant skill set and this allowed me to connect
 the more advanced topics I already know to a framework I want to be able to
 work in.
 
-(advancedreact.com/)[https://advancedreact.com/]
+https://advancedreact.com

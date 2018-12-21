@@ -42,7 +42,6 @@ export default class OrderList extends Component {
         console.log(orders);
         return (
           <div>
-            <p>{orders.length}</p>
             <OrderUl>
               {orders.map(order => (
                 <OrderItemStyles key={order.id}>

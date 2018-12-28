@@ -43,7 +43,6 @@ describe('<Nav/>', () =>{
     );
     await wait();
     wrapper.update();
-    // console.log(wrapper.debug());
     const nav = wrapper.find('ul[data-test="nav"]');
     expect(toJSON(nav)).toMatchSnapshot();
 
@@ -71,9 +70,7 @@ describe('<Nav/>', () =>{
     await wait();
     wrapper.update();
     const nav = wrapper.find('ul[data-test="nav"]');
-    // console.log(nav.debug());
     const count = nav.find('div.count');
-    console.log(count.debug());
     expect(toJSON(count)).toMatchSnapshot();
   })
 

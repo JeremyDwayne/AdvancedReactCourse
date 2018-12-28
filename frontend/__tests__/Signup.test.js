@@ -22,7 +22,7 @@ const mocks = [
       variables: {
         name: me.name,
         email: me.email,
-        password: 'dog',
+        password: 'wes',
       },
     },
     result: {
@@ -69,12 +69,13 @@ describe('<Signup/>', () => {
     wrapper.update();
     type(wrapper, 'name', me.name);
     type(wrapper, 'email', me.email);
-    type(wrapper, 'password', 'dog');
+    type(wrapper, 'password', 'wes');
     wrapper.update();
     wrapper.find('form').simulate('submit');
     await wait();
     // query the user out of the apollo client
     const user = await apolloClient.query({ query: CURRENT_USER_QUERY });
+    user.data.me.orders = []; // There shouldn't be an orders array by default on a fakeUser imo
     expect(user.data.me).toMatchObject(me);
   });
 });
